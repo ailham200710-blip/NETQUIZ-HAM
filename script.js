@@ -453,3 +453,23 @@ function renderAchievements() {
         container.appendChild(div);
     });
 }
+// ==================== FITUR MUSIK LATAR ====================
+let isMusicPlaying = false;
+
+function toggleMusic() {
+    const bgMusic = document.getElementById("bg-music");
+    const musicBtnIcon = document.querySelector("#music-btn i");
+
+    if (isMusicPlaying) {
+        bgMusic.pause();
+        musicBtnIcon.className = "fa-solid fa-volume-xmark";
+        isMusicPlaying = false;
+    } else {
+        bgMusic.play().then(() => {
+            musicBtnIcon.className = "fa-solid fa-volume-high";
+            isMusicPlaying = true;
+        }).catch(error => {
+            console.log("Autoplay diblokir oleh browser. Klik tombol lagi untuk memutar.");
+        });
+    }
+}

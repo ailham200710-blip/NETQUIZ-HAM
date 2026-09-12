@@ -20,7 +20,10 @@
             <button onclick="showScreen('screen-leaderboard')"><i class="fa-solid fa-trophy"></i> Leaderboard</button>
             <button onclick="showScreen('screen-achievements')"><i class="fa-solid fa-award"></i> Achievement</button>
         </nav>
-        <div class="theme-toggle">
+        <div class="header-controls" style="display: flex; gap: 10px;">
+            <button id="music-btn" onclick="toggleMusic()" style="background:none; border:none; color:var(--text-dark); font-size:1.3rem; cursor:pointer;">
+                <i class="fa-solid fa-volume-xmark"></i>
+            </button>
             <button id="theme-btn" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i></button>
         </div>
     </header>
@@ -180,7 +183,15 @@
     <footer style="text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8;">
         <p>Created with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> by <strong>Ahmad Ilham Arufi</strong></p>
     </footer>
-    
+    <MUSIC.MP3>
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-game-level-music-689.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
     <script src="script.js"></script>
 </body>
 </html>
